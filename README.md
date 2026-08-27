@@ -10,5 +10,5 @@ How to install dependencies:
 
 Open up your VSCode terminal (Ctrl + `) and type the following command
 ```terminal
-pip install .\requirements.txt
+pip install -r .\requirements.txt
 ```
