@@ -6,9 +6,7 @@ import ffmpeg
 from requests import Response
 from playwright.sync_api import sync_playwright
 import time
-
-
-
+from seleniumbase import sb_cdp
 
 #Please be nice, I'm a huge amateur
 #Replace with your Domestika Session cookie (Shift + Ctrl + C > Application > Cookies > www.domestika.org > _domestika_session)
@@ -118,9 +116,11 @@ def get_folder(course_name: str, lesson_name: str):
                 return folder_path
 
 def download_page(url:str):
+    sb = sb_cdp.Chrome()
+    endpoint_url = sb.get_endpoint_url()
     with sync_playwright() as p:    
         print(f"Opening {url}...")
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.connect_over_cdp(endpoint_url)
         context = browser.contexts[0]
         page = context.pages[0]
         context.clear_cookies(name="_domestika_session")
@@ -163,6 +163,6 @@ def download_page(url:str):
             next_button = page.locator(".a-button.a-button--small.a-button--text")
             next_button.click()
         
-                
-choice_url = input("Enter the link ")
+
+choice_url = input("Enter the link (Be sure the click 'Unit 1' and copy the link from that) ")
 download_page(choice_url)
