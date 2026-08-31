@@ -10,7 +10,7 @@ from seleniumbase import sb_cdp
 
 #Please be nice, I'm a huge amateur
 #Replace with your Domestika Session cookie (Shift + Ctrl + C > Application > Cookies > www.domestika.org > _domestika_session)
-domestika_session = 'Fc4FQAm%2BFHHyvcqdo%2FPORUXRWUbpxddb2cmjYy4SRbrVD5ILf1XymNUC25tAVqdPDvkKmQ1LxUPXw7Yh5o6ueSZBIafaIPNL5FunSLZVa6q8c0R5PygGew9gJaMZEar6mMZA%2F%2Fs7tu2kkNFbhXYWCbJKOMgHeZIoxQUseqWWOpuiIAp3QeOIBic5cTjR3Y%2BG8%2Fgy2puFJs%2BDypaUanf4oowHyTPLu2TGI8iQiWU86%2B2XiwbZ2Bo2m7p69duCfLssJmFf%2F0l10%2FXfsRBZV7qbNZVc0NLnu6xN5NSS2XC8eS5cJpBMw0iIBSjW5ArY4jqUPNaf794GhV14to5Ju7bPAkfrT9sG%2BQJJzxKk7gpfd0hd5MuzKK2jV7s3EC97qH6sC7RBO%2Bqy37j2SDJndte41WPP3bICWIz6PvUaYeOjv0Ghx%2FTRXJQoMsYvIXFmjoWFMhKd%2BR5xYEwEBg%3D%3D--ucZDkUpOalnTIfel--WwO68JHLmfFzeYTf5ea0pw%3D%3D'
+domestika_session = ''
 cookie = {'name': '_domestika_session', 'value': domestika_session, 'domain': 'www.domestika.org', 'path': '/'}
 
 #BE SURE TO CHECK THE LANGUAGE ABBREVIATION UNDER NETWORK IN 'INSPECT ELEMENT'!!!
